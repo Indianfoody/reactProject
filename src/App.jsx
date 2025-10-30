@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-     <h1>Hello, I am KAJAL,</h1>
+     <h1>This is my first project</h1>
     </>
   )
 }
