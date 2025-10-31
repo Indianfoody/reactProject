@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import viteLogo from '/vite.svg';
 import Navbar from './components/navbar';
+import Home from './components/home';
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   return (
     <>
      <Navbar/>
+     <Home/>
     </>
   )
 }
