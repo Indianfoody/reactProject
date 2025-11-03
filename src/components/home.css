@@ -15,7 +15,12 @@ body{
   position:absolute;
   left:0px;
   right:0px;
-  top:400px;
-background-color: blanrgb(235, 187, 115)
+  top:581px;
+background-color:rgb(203, 220, 223);
+max-width:80%;
+height: 150px;
+margin-left: auto;
+margin-right:auto;
+text-align: center;
 }
 
