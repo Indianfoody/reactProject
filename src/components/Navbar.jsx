@@ -1,22 +1,35 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useNavigate } from "react-router-dom";
 import animal from "../assests/images/images.jpg"
 import "../components/Navbar.css"
-function Navbar() {
+    function Navbar() {
+     const navigate = useNavigate();
+    const handleClick = (item) => {
+    navigate(`/${item.toLowerCase()}`);
+        };
+    const [hovered, setHovered] = useState(null);
+    const navItem =["About", "Work", "Education", "Contact"];
     return (
         <section className='bg-secondary bg-gradient py-2'>
             <div className="container">
                 <div className="row align-items-center ">
                     <div className="col-4 d-flex"><img src={animal} alt="" style={{ width: "70px", height: "40px" }} />
-                    <p className='m-0 ms-2 d-flex '>Kajal</p>
+                    <p className='m-0 ms-2 d-flex align-items-center'>Kajal</p>
                     </div>
                     <div className="col-8 ">
                         <div className="navbaritem ">
-                            <ul className='d-flex justify-content-around nav '>
-                                <li className='hoverr p-1'>About</li>
-                                <li className='hoverr p-1'>Work</li>
-                                <li className=' hoverr p-1'>Experience</li>
-                                <li className='p-1'>contact</li>
+                            <ul className="d-flex justify-content-around nav">
+                                {navItem.map((item, index) => (
+                                <li 
+                                onMouseOver={() => setHovered(item)}
+                                onMouseLeave={() => setHovered(null)}
+                                style={{
+                                    background:hovered === item ? "white" : "transparent",
+                                    transition: "0.3s",
+                                    padding: "5px",
+                                    cursor: "pointer"
+                                }}   onClick={() => handleClick(item)} >{item}</li>
+                                ))}
                             </ul>
                         </div>
                     </div>
