@@ -11,8 +11,10 @@ function App() {
    <>
    
   <Router>
+          <Navbar/>
       <Routes>
-        <Route path="/" element={<Login />} />
+       {/*  <Route path="/" element={<Login />} /> */}
+  
         <Route path="/Navbar" element={<Navbar />} />
         <Route path="/About" element={<About />} />
       </Routes>
