@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import { useNavigate } from "react-router-dom";
-import animal from "../assests/images/images.jpg"
-import "../components/Navbar.css"
+import animal from "../assests/images/images.jpg";
+import logo from "../assests/images/logo.jpg";
+import "../components/Navbar.css";
     function Navbar() {
      const navigate = useNavigate();
     const handleClick = (item) => {
@@ -10,10 +11,10 @@ import "../components/Navbar.css"
     const [hovered, setHovered] = useState(null);
     const navItem =["About", "Work", "Education", "Contact"];
     return (
-        <section className='bg-secondary bg-gradient py-2'>
+        <section className='bg-dark bg-gradient py-2'>
             <div className="container">
-                <div className="row align-items-center ">
-                    <div className="col-4 d-flex"><img src={animal} alt="" style={{ width: "70px", height: "40px" }} />
+                <div className="row align-items-center text-white fw-bold">
+                    <div className="col-4 d-flex"><img src={logo} alt="" style={{ width: "50px", height: "50px" }} />
                     <p className='m-0 ms-2 d-flex align-items-center'>Kajal</p>
                     </div>
                     <div className="col-8 ">
@@ -24,7 +25,7 @@ import "../components/Navbar.css"
                                 onMouseOver={() => setHovered(item)}
                                 onMouseLeave={() => setHovered(null)}
                                 style={{
-                                    background:hovered === item ? "white" : "transparent",
+                                    background:hovered === item ? "black" : "transparent",
                                     transition: "0.3s",
                                     padding: "5px",
                                     cursor: "pointer"
