@@ -9,19 +9,19 @@ const Footer = () => {
       {/* Find Us */}
       <div className="col-lg-4 col-md-4 col-12 text-center mb-4">
         <strong className="d-block mb-2 text-uppercase fw-bold">Find Us</strong>
-        <p className="text-white mb-0">123 Main St, Anytown</p>
+        <p className="text-white mb-0">Address</p>
       </div>
 
       {/* Call Us */}
       <div className="col-lg-4 col-md-4 col-12 text-center mb-4">
         <strong className="d-block mb-2 text-uppercase fw-bold">Call Us</strong>
-        <p className="text-white mb-0">+1 (555) 123-4567</p>
+        <p className="text-white mb-0">8882863559</p>
       </div>
 
       {/* Mail Us */}
       <div className="col-lg-4 col-md-4 col-12 text-center mb-4">
         <strong className="d-block mb-2 text-uppercase fw-bold">Mail Us</strong>
-        <p className="text-white mb-0">contact@example.com</p>
+        <p className="text-white mb-0">kajalchandel2001@gmail.com</p>
       </div>
     </div>
 
