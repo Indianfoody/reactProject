@@ -2,14 +2,14 @@ import React, {useState} from 'react'
 import { useNavigate } from "react-router-dom";
 import animal from "../assests/images/images.jpg";
 import logo from "../assests/images/logo.jpg";
-import "../components/Navbar.css";
+import "../assests/custom.css";
     function Navbar() {
      const navigate = useNavigate();
     const handleClick = (item) => {
     navigate(`/${item.toLowerCase()}`);
         };
     const [hovered, setHovered] = useState(null);
-    const navItem =["About", "Work", "Education", "Contact"];
+    const navItem =["About", "Education", "Contact"];
     return (
         <section className='bg-dark bg-gradient py-2'>
             <div className="container">

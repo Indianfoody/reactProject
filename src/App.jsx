@@ -2,8 +2,7 @@ import { useState } from 'react';
 import viteLogo from '/vite.svg';
 import Login from './components/Login';
 import Navbar from './components/Navbar';
-import About from './components/About';
-import Work from './pages/Work';
+import About from './pages/About';
 import Education from './pages/Education';
 import Contact from './pages/Contact';
 import Footer from './components/footer';
@@ -22,7 +21,6 @@ function App() {
         {/* <Route path="/Navbar" element={<Navbar />} /> */}
          <Route path="/" element={<Landing />} />
         <Route path="/About" element={<About />} />
-        <Route path="/Work" element={<Work/>}/>
         <Route path="/Education" element={<Education/>}/>
         <Route path="/Contact" element={<Contact/>}/>
        </Routes>
