@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import aboutus from "../assests/images/aboutus.avif";
-import animal from "../assests/images/images.jpg"
+import animal from "../assests/images/images.jpg";
+import useScrollTo from "../components/UseScrollTo";
 import "../assests/custom.css"
 import { Container, Row, Col, Card } from "react-bootstrap";
 const About = () => {
