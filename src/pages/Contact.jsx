@@ -1,13 +1,13 @@
 import React from "react";
 import "../assests/custom.css";
-const Contact = () =>{
-    return(
-        <><div className="contact-page text-white d-flex align-items-center">
+const Contact = () => {
+  return (
+    <><div className="contact-page text-white d-flex align-items-center">
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-md-8 col-lg-7">
             <div className="text-center mb-4">
-              
+
               <h1 className="fw-bold">Send Me a Message</h1>
               <p className="mt-3 fw-bold">Getting in touch is easy!</p>
             </div>
@@ -67,6 +67,6 @@ const Contact = () =>{
         </div>
       </div>
     </div></>
-    )
+  )
 }
 export default Contact;

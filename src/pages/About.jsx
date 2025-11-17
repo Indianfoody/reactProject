@@ -6,6 +6,16 @@ import useScrollTo from "../components/UseScrollTo";
 import "../assests/custom.css"
 import { Container, Row, Col, Card } from "react-bootstrap";
 const About = () => {
+    const { ref, scrollTo } = useScrollTo();
+    const PDF_URL = '/Resume.pdf';
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = PDF_URL;
+        link.download = 'Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
     const messages = [
         {
             text: "I specialize in turning design concepts into fully functional, dynamic websites. My work revolves around writing clean, maintainable code and ensuring every project is optimized for performance and accessibility. I build responsive layouts, integrate APIs, and use modern tools like React, Bootstrap, Tailwind CSS, and Git to create seamless front-end experiences."
@@ -16,7 +26,7 @@ const About = () => {
         {
             text: "I focus on building modern, component-based front-end applications using React.js.I work with Hooks, Context API, Redux, and React Router to manage state, routing, and UI logic efficiently. I also integrate RESTful APIs and ensure every application I build is responsive, accessible, and optimized for performance.",
         },
-        
+
     ];
     return (
         <>
@@ -40,7 +50,7 @@ const About = () => {
             <section className="contentSection m-3">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 col-md-6 text-animate">
+                        <div className="col-12 col-md-6 text-animate" onClick={scrollTo}>
                             <h1>About us</h1>
                             <p>Hello!<br />
                                 My name is Kajal Singh Chandel, and I’m a frontend web developer passionate about creating clean, responsive, and user-friendly web applications.
@@ -68,14 +78,14 @@ const About = () => {
                                     md={4}
                                     sm={6}
                                     className="mb-4 d-flex align-items-stretch"
+
                                 >
                                     <Card
                                         className="shadow-sm p-3 flex-fill"
                                         style={{
                                             border: "none",
                                             borderRadius: "15px",
-                                            background:
-                                                "linear-gradient(180deg, #e8f1ff 0%, #f5faff 100%)",
+                                            background: "linear-gradient(180deg, #e8f1ff 0%, #f5faff 100%)",
                                             position: "relative",
                                         }}
                                     >
@@ -100,6 +110,15 @@ const About = () => {
                                 </Col>
                             ))}
                         </Row>
+                        <div className="text-center mt-5"> {/* Added a wrapper for centering and margin */}
+                            <button
+                                ref={ref}
+                                onClick={handleDownload}
+                                style={{ padding: '10px 20px', backgroundColor: 'green', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}
+                            >
+                                Download Resume
+                            </button>
+                        </div>
                     </Container>
                 </div></section></>
     )

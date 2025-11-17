@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-export const useScrollTo = () => {
+const useScrollTo = () => {
   const ref = useRef(null);
 
   const scrollTo = () => {
@@ -9,3 +9,4 @@ export const useScrollTo = () => {
 
   return { ref, scrollTo };
 };
+export default useScrollTo;
