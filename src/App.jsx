@@ -7,8 +7,11 @@ import Education from './pages/Education';
 import Contact from './pages/Contact';
 import Footer from './components/footer';
 import Landing from './pages/Landing';
-import FreelanceNotificationForm from './components/FreeLanceNotificationform';
+
+
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import JokeGenerator from './components/JokeGenerator';
+import HindiJokeGenerator from './components/HindiJokeGenerator';
 
 
 function App() {
@@ -16,6 +19,9 @@ function App() {
    <>
   <Router>
           <Navbar/>
+          <HindiJokeGenerator />
+          <JokeGenerator />
+        
       <Routes>
        {/*  <Route path="/" element={<Login />} /> */}
   
@@ -25,7 +31,7 @@ function App() {
         <Route path="/Education" element={<Education/>}/>
         <Route path="/Contact" element={<Contact/>}/>
        </Routes>
-       <FreelanceNotificationForm/>
+       {/* <FreelanceNotificationForm/> */}
        <Footer/>
     </Router> 
    </>
