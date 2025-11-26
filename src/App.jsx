@@ -7,35 +7,27 @@ import Education from './pages/Education';
 import Contact from './pages/Contact';
 import Footer from './components/footer';
 import Landing from './pages/Landing';
-
-
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-import JokeGenerator from './components/JokeGenerator';
-import HindiJokeGenerator from './components/HindiJokeGenerator';
+// import JokeGenerator from './components/JokeGenerator';
+// import HindiJokeGenerator from './components/HindiJokeGenerator';
 
 
 function App() {
   return (
    <>
   <Router>
-          <Navbar/>
-          <HindiJokeGenerator />
-          <JokeGenerator />
-        
+      <Navbar/>
       <Routes>
        {/*  <Route path="/" element={<Login />} /> */}
-  
         {/* <Route path="/Navbar" element={<Navbar />} /> */}
          <Route path="/" element={<Landing />} />
         <Route path="/About" element={<About />} />
         <Route path="/Education" element={<Education/>}/>
         <Route path="/Contact" element={<Contact/>}/>
        </Routes>
-       {/* <FreelanceNotificationForm/> */}
        <Footer/>
     </Router> 
    </>
   );
 }
-
 export default App;

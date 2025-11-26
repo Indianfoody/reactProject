@@ -12,8 +12,9 @@ const About = () => {
         const link = document.createElement('a');
         link.href = PDF_URL;
         link.download = 'Resume.pdf';
-        
-        
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     }
     const messages = [
         {
